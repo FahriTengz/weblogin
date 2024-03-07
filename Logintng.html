@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login(TengSearch)</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.h3guest{
+    font-size: 120%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    right: 4%;
+    top: 4%;
+    width: 5%;
+    height: 3%;
+}
+@media screen and (max-width: 768px) {
+    .h3guest{
+        position: absolute;
+        right: 15%;
+        width: 3%;
+        top: 4.5%;
+    }
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <a class="h3guest" href="https://fahritengz.github.io/WebPencarian2/">Guest</a>
+    </header>
+    <main>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Login</button>
+        </form>
+    </main>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Check if the username and password are correct
+    if (username === 'admin' && password === '12345') {
+        // Redirect to a new page
+        window.location.href = 'https://fahritengz.github.io/WebPencarian1/';
+    } else {
+        alert('Password Salah!');
+    }
+});
+    </script>
+</body>
+</html>
